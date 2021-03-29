@@ -1,0 +1,41 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /quran-search
+RewriteRule ^index.html$ index.php
+
+RewriteRule ^juz.html$ chapter.php
+RewriteRule ^juz/(.*)/page/(.*)$ Chapter.php?id=$1&page=$2
+RewriteRule ^juz-([0-9]+).html$ Chapter.php?id=$1
+
+RewriteRule ^safha/([0-9]+)$ page_quran.php?id=$1
+
+RewriteRule ^search.html$ search-quran.php
+RewriteRule ^notify.html$ notify.php
+RewriteRule ^quran.html$ quran_all.php
+RewriteRule ^contact.html$ contact_us.php
+RewriteRule ^hadeeth_search.html$ hadeeth.php
+
+RewriteRule ^tafsser-(.*)-(.*)-(.*)\.html$ tafsser.php?aya=$1&sura=$2&type=$3
+
+RewriteRule ^print-(.*)-(.*)-(.*)\.html$ print.php?aya=$1&sura=$2&type=$3
+RewriteRule ^pdftfs-([0-9]+)-([0-9]+)-([0-9]+)\.html$ pdf_tafssear.php?aya=$1&sura=$2&type=$3
+
+RewriteRule ^aya-([0-9]+)-sora-([0-9]+).html$ aya_view.php?aya=$1&sora=$2
+RewriteRule ^sorah-([0-9]+).html$ sorah.php?id=$1
+RewriteRule ^sorah-([0-9]+)-page-([0-9]+)$ sorah.php?id=$1&page=$2
+
+RewriteRule ^quran_topic.html$ topic.php
+RewriteRule ^Topic-page-([0-9]+)$ topic.php?page=$1
+RewriteRule ^ayat_Topic-([0-9]+).html$ topic_ayat.php?id=$1
+
+RewriteRule ^search/(.*)/page/(.*)/$ search.php?search_word=$1&page=$2
+RewriteRule ^search/(.*)/page/(.*)$ search.php?search_word=$1&page=$2
+RewriteRule ^search/(.*)/$  search.php?search_word=$1
+RewriteRule ^search/(.*)$  search.php?search_word=$1 [NC,L]
+
+#sitemap
+RewriteRule  ^sitemap\.xml$ sitemap.php
+RewriteRule  ^sitemap-([0-9]+)\.xml$ sitemap.php?page=$1
+#rss
+RewriteRule ^rss.xml$ rss.php
+</IfModule>
