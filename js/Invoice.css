@@ -1,0 +1,126 @@
+/* Formatting for Invoice.php's HTML output. */
+
+@CHARSET "UTF-8";
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../templates/lite1/css/fonts/amiri-regular.eot?') format('eot'),
+         url('../templates/lite1/css/fonts/amiri-regular.woff') format('woff'),
+         url('../templates/lite1/css/fonts/amiri-regular.ttf')  format('truetype');
+}
+body {
+	margin: 36pt 72pt;
+	direction: rtl;
+}
+
+/* Page header */
+div#header {
+	border-bottom: solid black;
+	padding-bottom: 19pt;
+	margin-bottom: 72pt;
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+}
+
+.companyName p{
+	font-family: "Palatino", "Times New Roman", "Georgia", serif;
+	font-size: 26px;
+	padding-left: 328px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.companyName address {
+	font-family: 'Amiri', tahoma, "MS Sans Serif", Geneva, sans-serif;
+	font-size: 16px;
+	/*padding-left: 100%;*/
+	text-align: right;
+}
+
+/* Page content */
+div#content {
+	color: black;
+	direction: rtl;
+	font-weight: bold;
+	font-family:'Amiri', tahoma, "MS Sans Serif", Geneva, sans-serif;
+}
+
+table.invoice {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-collapse: collapse;
+}
+
+tr.invoiceHead {
+	border-bottom: 2pt solid green;
+}
+
+th.itemCol {
+	text-align: left;
+	width: 60%;
+}
+
+th.quantityCol {
+	text-align: right;
+	width: 10%;
+}
+
+th.priceCol {
+	text-align: right;
+	width: 15%;
+}
+
+th.costCol {
+	text-align: right;
+	width: 15%;
+}
+
+tr.invoiceRow {
+	border-bottom: 1pt solid black;
+}
+
+td.itemCol {
+	text-align: left;
+}
+
+td.quantityCol {
+	text-align: right;
+}
+
+td.priceCol {
+	text-align: right;
+}
+
+td.costCol {
+	text-align: right;
+}
+
+tr.totalRow {
+	border-bottom: 1pt solid green;
+}
+
+th.totalHead {
+	text-align: right;
+}
+
+td.totalCol {
+	text-align: right;
+}
+
+/* Page footer */
+div#footer {
+	border-top: solid black;
+	padding-top: 9pt;
+	margin-top: 72pt;
+}
+
+p.print {
+	float: right;
+	border: none;
+}
+
+p.info {
+	font-size: 12px;
+}

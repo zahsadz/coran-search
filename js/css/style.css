@@ -1,0 +1,121 @@
+
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/amiri-regular.eot?') format('eot'),
+         url('fonts/amiri-regular.woff') format('woff'),
+         url('fonts/amiri-regular.ttf')  format('truetype');
+}
+@font-face {
+font-family: 'me_quran';
+	src: url('me_quran/me_quran.eot?#iefix') format('embedded-opentype'),  
+	url('me_quran/me_quran.woff') format('woff'), 
+	url('me_quran/me_quran.ttf')  format('truetype'), 
+	url('me_quran/me_quran.svg#me_quran') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	   font-family: 'Amiri',"Arabic Transparent", Arial, "Comic Sans MS", Courier;
+
+}
+a{
+	text-decoration: none;
+}
+.ayat{
+	color: black;
+	font-size: 26px;
+	/*display: block;*/
+	margin: 10px 15px 15px 20px;
+	clear: both;
+	font-family: 'Amiri','me_quran',tahoma, serif;
+	line-height: 65px;
+	/*border: 0px none;
+	-moz-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px black;*/
+	word-wrap: break-word;
+	padding: 10px;
+	text-decoration: none;
+	/*font-weight: bolder;*/
+	direction: rtl;
+}
+.me_quran{
+	color: black;
+	font-size: 26px;
+	/*display: block;*/
+	margin: 10px 15px 15px 20px;
+	clear: both;
+	font-family: 'me_quran',tahoma, serif;
+	line-height: 65px;
+	/*border: 0px none;
+	-moz-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px black;*/
+	word-wrap: break-word;
+	padding: 10px;
+	text-decoration: none;
+	background-color: #fffacd;
+}
+/* Styles for wrapping the search box */
+
+.main {
+
+    width: 50%;
+
+    margin: 50px auto;
+
+}
+
+
+
+/* Bootstrap 4 text input with search icon */
+
+
+
+.has-search .form-control {
+
+    padding-left: 2.375rem;
+
+}
+
+.has-search .form-control-feedback {
+
+    position: absolute;
+
+    z-index: 2;
+
+    display: block;
+    width: 2.375rem;
+
+    height: 2.375rem;
+    line-height: 2.375rem;
+
+    text-align: center;
+
+    pointer-events: none;
+
+    color: #aaa;
+
+}
+select {
+ text-align-last: center;
+ text-align: center;
+ text-indent: 5px;
+    padding-right: 29px;
+	  padding-bottom: 9px;
+    direction: rtl;
+	    padding: 1px; 
+    border: solid 1px #0077B0; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 25, from(#ffffd9), color-stop(4%, #C6ECFF), to(#ffffd9)); 
+    background: -moz-linear-gradient(top, #ffffd9, #C6ECFF 1px, #ffffd9 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  }
+option {
+  text-align: center;
+  padding-right: 29px;
+}
