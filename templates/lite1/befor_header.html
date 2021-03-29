@@ -1,0 +1,148 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<div class="card"  style='text-align: center;'>
+  <div class="card-header">
+    محرك بحث قرأني
+  </div>
+  <div class="card-body"> 
+
+ <form name="search" autocomplete="off" action="{$base_url}/search.php" method="get">
+ <div class="main" style='text-align: right;'>
+ 
+ <div class="input-group mb-2">
+  <span class="input-group-prepend">
+    <div class="input-group-text bg-transparent border-right-1 border-secondary rounded-0">
+      <i class="fa fa-search"></i>
+    </div>
+  </span>
+  <input class="form-control py-2 border-left-0 border border-secondary border-right-0 rounded-0" name="search_word" type="search" value="{if isset($smarty.get.search_word) ne ''}{$search_word}{else}{$Default_Search_Term}{/if}" onFocus="if(this.value=='{$Default_Search_Term}') this.value='';" placeholder="البحث في القرآن" aria-label="Search" id="example-search-input" />
+  <span class="input-group-append">
+    <button class="btn btn-success border-left-1 border border-secondary border-right-0 rounded-0" type="submit">
+     إبحث في القران
+    </button>
+  </span>
+</div>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method1" value="1" {if $method eq '1'}checked{/if}>
+  <label class="form-check-label" for="method1">
+أي من الكلمات
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method2" value="2" {if $method eq '2'}checked{/if}>
+  <label class="form-check-label" for="method2">
+كل الكلمات
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method3" value="3" {if $method eq '3'}checked{/if}>
+  <label class="form-check-label" for="method3">
+أي من الكلمات مهما كان شكل الألف أو تنقيط او بدون تنقيط  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method4" value="4" {if $method eq '4'}checked{/if}>
+  <label class="form-check-label" for="method4">
+كل الكلمات مهما كان شكل الألف أو حرف منقط أو غير منقط  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method5" value="5" {if $method eq '5'}checked{/if}>
+  <label class="form-check-label" for="method5">
+مهما كان شكل الحرف
+ </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="method" id="method6" value="6" {if $method eq '6'}checked{/if}>
+  <label class="form-check-label" for="method6">
+ <b> الكلمة بالتحديد </b> </label>
+</div>
+  </div>
+
+</form>
+</div>
+</div>
+<div class="card">
+  <div class="card-body">		
+<form name="sorah" action="{$base_url}/tafsser.php" method="get" style='text-align: center;'>
+
+
+	<div class="row align-items-center justify-content-center">
+            	        <div class="col-md-2 pt-3">
+                           <div class="form-group ">
+                              <select name="sura" class="sura_sel form-control">
+                                <option value="1" selected="">إختر سورة</option>
+                              {$soranames}
+                              </select>
+                           </div>
+                        </div>
+                		<div class="col-md-2 pt-3">
+                           <div class="form-group">
+                              <select name="aya" class="aya_sel form-control">
+                                <option value="1" selected="">إختر رقم الاية</option>
+                              </select>
+                           </div>
+                        </div>
+						<div class="col-md-2 pt-3">
+                           <div class="form-group">
+                              <select name="type" class="form-control">
+                                <option value="1" selected="">إختر تفسيرا أو ترجمة</option>
+                                <option value="1">التفسير الميسر</option>
+                                <option value="2">Audi</option>
+                                <option value="3">Maruti</option>
+                                <option value="4">Tesla</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-md-2">
+            	           <button type="submit" class="btn btn-primary btn-block">تصفح الأن</button>
+            	        </div>
+                	</div>
+</form>
+<br />
+</div>
+</div>
+<div class="card">
+  <div class="card-body">		
+<form dir="ltr" name="sorah" action="{$base_url}/tafsser.php" method="get" style='text-align: center;'>
+
+
+	<div class="row align-items-center justify-content-center">
+            	        <div class="col-md-2 pt-3">
+                           <div class="form-group ">
+                              <select name="sura" class="sura_sel form-control">
+                                <option value="1" selected="">sora names</option>
+                              {$soranames_en}
+                              </select>
+                           </div>
+                        </div>
+                		<div class="col-md-2 pt-3">
+                           <div class="form-group">
+                              <select name="aya" class="aya_sel form-control">
+                                <option value="1" selected="">aya numbers</option>
+                              </select>
+                           </div>
+                        </div>
+						<div class="col-md-2 pt-3">
+                           <div class="form-group">
+                              <select name="type" class="form-control">
+                                <option value="6" selected="">transliteration</option>
+                                <option value="4">traduction en langue francaise</option>
+                                <option value="5">The Saheeh International Quran Translation</option>
+                                <option value="6">English Transliteration</option>
+                                <option value="7">Amazigh</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-md-2">
+            	           <button type="submit" class="btn btn-primary btn-block">go</button>
+            	        </div>
+                	</div>
+</form>
+<br />
+</div>
+</div>
+</div>
+</div>
+</div>

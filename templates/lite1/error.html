@@ -1,0 +1,16 @@
+{include file="header.html" home_title="خطا" site_title="error"}
+
+    <div class="content">
+    <div align="center">
+
+ <h1>{$search_word} </h1>
+ <br>
+<br>
+{if $error eq ''} {else}<div class="error"> {$error}</div> {/if}
+<br>
+
+
+</div>
+</div>
+
+{include file="footer.html"}

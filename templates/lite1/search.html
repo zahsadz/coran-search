@@ -1,0 +1,109 @@
+{include file="header.html"  site_title=" كلمة $search_word في القرأن الكريم " home_title="$site_title"}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+	<div class="card mt-5">
+  <div class="card-body">
+   {$listen_form}
+
+
+</div>
+
+</div>
+<div class="card mt-5">
+  <div class="card-body">
+
+
+ <h1 class="card-header">البحث عن كلمة {$search_word}  في القرأن الكريم  </h1>
+ <h3 class="card-header">عدد المرات التي تكررت فيها كلمة {$search_word}  في القرآن الكريم  : {$totalItems}</h3>
+  <h4 class="card-header">كلمات مشابهة:{$search_word_h}</h4>
+   <div class="card-footer bg-transparent border-1">{$timer}</div>
+
+</div>
+
+</div>
+
+
+{if $totalItems eq '0'}
+<div class="card mt-5">
+  <div class="card-body">
+
+<li><span>لم يتم
+	العثور على نتائج تحتوي على جميع عبارات البحث التي أدخلتها .</li>
+	<li> لم يطابق بحثك – </span>
+	<font color="#800000"><b>{$search_word}</b></font>
+
+<a href="{$base_url}/search.php?search_word={$search_word}&method=3"> الموقع يقدم خدمة البحث المتقدم إضغط هنا لنتيجة أدق </a> 	 
+ <br />
+
+</div>
+
+</div>
+
+ {/if} 
+ 
+
+  {section name='row_all'  loop=$row_all}
+
+<div class="card mt-5 mb-5">
+
+    <h5 class="card-header">سورة :{$row_all[row_all].sura|sorahname}
+</h5>
+
+
+  <div class="card-body">
+  
+
+    
+ <div id="player-container">
+ {$row_all[row_all].sura|sound_check_aya:$row_all[row_all].aya}
+</div>
+   <p class="card-text ayat"><h4> {$row_all[row_all].simple|google_highlight:$search_word}  </h4></p>
+  <br />
+ عدد الكلمات :{$row_all[row_all].simple|count_words}
+   عدد الحروف :{$row_all[row_all].simple|arabic_count_char}
+
+سورة :<a href="{$base_url}/sorah-{$row_all[row_all].sura}.html"> {$row_all[row_all].sura|sorahname} </a>الاية : ({$row_all[row_all].aya})
+الجزء : ({$row_all[row_all].juz})
+ الحزب :({$row_all[row_all].hezb})
+ الصفحة :({$row_all[row_all].page})
+<span class="light">
+الربع :{$row_all[row_all].rub}
+ </span>
+    <br />
+ 
+      <br />
+<a href="{$base_url}/tafsser-{$row_all[row_all].aya}-{$row_all[row_all].sura}-1.html" >تفسير إبن كثير</a>
+- <a href="{$base_url}/tafsser-{$row_all[row_all].aya}-{$row_all[row_all].sura}-3.html">تفسير الجلاليين</a>
+- <a href="{$base_url}/tafsser-{$row_all[row_all].aya}-{$row_all[row_all].sura}-2.html">التفسير الميسر</a>
+
+  </div>
+
+</div>
+
+
+
+  {/section}
+  
+  {if $totalItems gt '0'}
+
+<div class="text-center">
+  {$pagination}
+       </div> 
+
+  {/if}
+    </div> 
+	
+	<div class="col-6 col-md-4">
+	.col-6 .col-md-4
+	</div>
+
+
+</div>
+   </div> 
+   
+   
+
+{include file="footer.html"}
+

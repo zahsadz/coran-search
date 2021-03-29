@@ -1,0 +1,127 @@
+{include file="header.html" home_title=" قراءة سورة $site_title مكتوبة كاملة بالخط الكبير " site_title=" القران الكريم مكتوب"}
+
+  
+<div class="container">
+ <div class="row">
+  <div class="col-md-12">
+
+<div class="card mt-5 mb-3">
+
+{section name='i'  loop=$row_suras}
+
+ <h1 class="pt-5">سورة {$row_suras[i].name} عدد الأيات  ({$row_suras[i].ayat_count}) </h1>
+
+<ul class="nav">
+  <li class="nav-item">
+
+<a class="nav-link"  href="{$base_url}/sorah-{$row_suras[i].id}.html">سورة : {$row_suras[i].name} </a>
+
+  </li>
+
+  <li class="nav-item">
+
+<a class="nav-link" href="#">ترتيب السورة في المصحف : ({$row_suras[i].id})</a>
+  </li>
+
+  <li class="nav-item">
+
+<a class="nav-link" href="#"> عدد الايات :({$row_suras[i].ayat_count})</a>
+   </li>
+
+   <li class="nav-item">
+
+<a class="nav-link" href="#"> صفحتها بالمصحف :({$row_suras[i].page_no})</a>
+   </li>
+
+   <li class="nav-item">
+
+ <a class="nav-link" href="#">الترتيب حسب النزول:({$row_suras[i].revel})</a>
+   </li>
+
+   <li class="nav-item">
+
+<a class="nav-link" href="#"> مكان النزول :{if $row_suras[i].makan_nozol eq "makki"}
+مكية
+ {else}
+ مدنية
+{/if}
+  {/section}</a>
+  </li>
+</ul>
+    </div>   
+
+    <br />
+	<script>
+{literal}
+function updateplayer() {
+var sourceUrl = document.getElementById('reciter_ayates').value;
+//alert(sourceUrl);
+//var source = document​.​getElementById​(​"mp3_src"​)​;
+//source.src = sourceUrl;
+//document​.​getElementById​(​"mp3ppl"​)​.​src = sourceUrl;
+document.getElementById('desc').innerHTML = sourceUrl;
+
+}
+{/literal}
+</script>
+<div class="card mt-5 mb-5">
+  <div class="mt-5">
+
+<p class="font-weight-bold">
+إختر قارئا :	</p>
+{$sound_check_sora_rd}
+	  </div>   
+
+	  <div class="card-body">
+	
+<div id="player-container">
+
+ {$sound_check_sora}
+   <div id="desc"></div>
+   </div>
+  </div>   
+  </div>   
+
+  <div align="center"  style="padding-bottom: 6px;">
+<div class="btn-group" role="group">
+
+<span class="btn btn-warning"><a href="{$base_url}/sorah-{$sorah_previous}.html"> السورة السابقة </a></span>
+<span class="btn btn-success"><a href="{$base_url}/sorah-{$sorah_next}.html"> السورة التالية </a></span>
+
+	</div>
+
+	</div>
+		  
+
+
+<div class="card mt-5 mb-5">
+
+
+	      <div class="ayat">
+
+  <ul class="list-group list-group-flush">
+
+	  {section name='i'  loop=$row_all}
+	      <li class="list-group-item me_quran">	
+
+<a href="{$base_url}/aya-{$row_all[i].aya}-sora-{$row_all[i].sura}.html">
+
+ {$row_all[i].text}
+</a>	</li>
+
+      <br />
+
+
+
+  {/section}
+    </ul>
+
+    </div>   
+
+</div>
+</div>
+</div>
+</div>
+
+
+{include file="footer.html"}

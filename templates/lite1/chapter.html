@@ -1,0 +1,30 @@
+{include file="header.html" home_title="فهرس الاجزاء" site_title="$site_title"}
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+
+
+ <h1>{$site_title} </h1>
+<h4 class="mt-5 mb-5">قم باختيار الجزء من الفهرس</h4>
+
+<table class="table" border="1" >
+
+{section name=i loop=$Chapter_table step=3 }
+ 		<tr>
+
+  {section name=co loop=$Chapter_table start=$smarty.section.i.index max=3}
+
+<td><a href="{$base_url}/juz-{$Chapter_table[co].ID}.html">{$Chapter_table[co].Chapter}<a></td>
+
+{/section}
+   </tr>
+
+{/section}
+</table>
+
+  </div>
+       </div>
+
+    </div>
+{include file="footer.html"}

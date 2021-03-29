@@ -1,0 +1,82 @@
+{include file="header.html" home_title=" قراءة الصفحة $page_id مكتوبة كاملة بالخط الكبير " site_title=" القران الكريم مكتوب"}
+
+  
+<div class="container">
+ <div class="row">
+  <div class="col-md-12">
+  
+  
+<div class="card text-center">
+  <div class="card-header">
+    الصفحة  {$page_id}  من القرأن الكريم
+
+  </div>
+    
+</div>
+
+
+
+  <div align="center"  style="padding-bottom: 6px;">
+  {$pagi}
+
+	</div>
+		  
+
+
+<div class="card mt-5 mb-5">
+  <div class="card-body">
+
+
+	      <div class="ayat">
+
+  <ul class="list-group list-group-flush">
+
+	  {section name='i'  loop=$row_all}
+	      <li class="list-group-item me_quran">	
+
+<a href="{$base_url}/aya-{$row_all[i].aya}-sora-{$row_all[i].sura}.html">
+
+ {$row_all[i].text_otmani}
+</a>	
+</li>
+<ul class="nav">
+
+  <li class="nav-item">
+
+<a class="nav-link" href="#">الأية : ({$row_all[i].aya})</a>
+  </li>
+
+  <li class="nav-item">
+
+<a class="nav-link" href="#"> الجزء :({$row_all[i].juz})</a>
+   </li>
+
+   <li class="nav-item">
+
+<a class="nav-link" href="#"> الحزب:({$row_all[i].hezb})</a>
+   </li>
+
+   <li class="nav-item">
+
+ <a class="nav-link" href="#">الصفحة:({$row_all[i].page})</a>
+   </li>
+
+<li class="nav-item">
+
+ <a class="nav-link" href="#">سورة:({$row_all[i].name})</a>
+   </li>
+</ul>
+  {/section}
+    </ul>
+
+    </div>   
+
+</div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+{include file="footer.html"}

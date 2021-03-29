@@ -1,0 +1,63 @@
+{include file="header.html" home_title="$home_title" site_title="$site_title"}
+
+
+<div class="container">
+ <div class="row">
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+ 
+<div class="card border-0 mb-3 text-center" style="max-width: 100%;">
+  <div class="card-header bg-transparent border-0 text-center"> 
+  {$pagi}
+</div>
+  <div class="card-body text-success">
+    <h2 class="card-title">{$home_title}</h2>
+    <p class="card-text">
+ {$pagination}
+	</p>
+  </div>
+  
+</div>
+
+
+
+
+
+  {section name='view_chapterNO'  loop=$view_chapterNO}
+
+ <div class="card border-success mb-3 text-center" style="max-width: 100%;">
+
+  <div class="card-header bg-secondary border-success text-center"> 
+
+سورة : {$view_chapterNO[view_chapterNO].name}
+
+</div>
+
+   <div class="card-body text-success">
+
+  <h2 class="ayat">{$view_chapterNO[view_chapterNO].text_otmani} </h2>
+</div>
+  <div class="card-footer bg-warning  border-success">
+
+سورة :<a href="{$base_url}/sorah-{$view_chapterNO[view_chapterNO].sura}.html"> {$view_chapterNO[view_chapterNO].name} </a>
+
+الاية : ({$view_chapterNO[view_chapterNO].aya})
+الصفحة:({$view_chapterNO[view_chapterNO].page})
+الجزء:({$view_chapterNO[view_chapterNO].juz})
+الحزب:({$view_chapterNO[view_chapterNO].hezb})
+
+ 
+- <a href="{$base_url}/tafsser-{$view_chapterNO[view_chapterNO].aya}-{$view_chapterNO[view_chapterNO].sura}-1.html" >تفسير إبن كثير</a>
+- <a href="{$base_url}/tafsser-{$view_chapterNO[view_chapterNO].aya}-{$view_chapterNO[view_chapterNO].sura}-3.html"  >تفسير الجلاليين</a>
+- <a href="{$base_url}/tafsser-{$view_chapterNO[view_chapterNO].aya}-{$view_chapterNO[view_chapterNO].sura}-2.html" >التفسير الميسر</a>
+  </div>
+
+   </div>
+
+  {/section}
+
+ 
+  </div>
+       </div>
+
+    </div>
+{include file="footer.html"}

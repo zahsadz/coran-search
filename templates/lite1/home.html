@@ -1,0 +1,56 @@
+{include file="header.html"}
+<div class="container">
+  <!-- For demo purpose -->
+  <div class="row py-5">
+    <div class="col-lg-9 mx-auto text-black text-center">
+	<div class="card text-center">
+  
+  <div class="card-body">
+
+  {section name='randomaya'  loop=$result}
+      <h1 class="display-4">{$result[randomaya].text} ({$result[randomaya].aya})</h1>
+      <p class="lead mb-0"> التفسير الميسر :{$result[randomaya].altafsir}</p>
+      <p class="lead">الأية ({$result[randomaya].aya}) 
+	  <a href="{$base_url}/aya-{$result[randomaya].aya}-sora-{$result[randomaya].sura}.html" class="text-black">
+                <u>سورة  :{$result[randomaya].name} </u></a>
+      </p>
+	    {/section}
+     </div>
+ 
+</div>
+    </div>
+  </div>
+  <!-- End -->
+
+
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+
+<div class="card" style="width: 100%;">
+  <ul class="list-group list-group-flush">
+	  {section name='randomaya'  loop=$result}
+   
+	   <li dir="ltr" class="list-group-item">	
+
+<h2>{$result[randomaya].entxt} </h2>
+	</li>
+
+   
+
+  {/section}
+  </ul>
+  <div class="card-footer bg-transparent border-success">
+
+{$showhistory}
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+{include file="footer.html"}

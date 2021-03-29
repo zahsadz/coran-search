@@ -1,0 +1,132 @@
+{include file="header.html" home_title="&#1575;&#1604;&#1578;&#1571;&#1603;&#1583; &#1605;&#1606; &#1589;&#1581;&#1577; &#1575;&#1604;&#1571;&#1581;&#1575;&#1583;&#1610;&#1579; &#1575;&#1604;&#1606;&#1576;&#1608;&#1610;&#1577;" site_title="$site_title"}
+    	{literal}<style>
+		.qalink{
+			font-size:16px;
+			font-weight: bold;
+                        font-family: arial;
+		}
+
+
+		#dorar{
+			background: none repeat scroll 0 0 #4dff002b !important;
+    border-color: #C2D288 !important;
+    padding: 10px;
+		}
+
+		.info-subtitle{
+			color:#bb5700;
+		}
+
+		.search-keys{
+			color:red;
+			font-weight:bolder;
+		}
+
+	</style>
+ <script type="text/javascript">
+$(document).ready(function() {
+ $("#submit").click(function () {
+$(".responce").html('<img src="'+base_url+'/images/loader.gif" alt="Loading" id="loading" />').show();
+var query = $('#skey').val();
+  if(query=='')
+    {
+        alert("اكتب كلمة بحث من فضلك");
+ $(".responce").html("اكتب كلمة بحث من فضلك");
+    } else {
+
+	$.getJSON("https://dorar.net/dorar_api.json?skey=" + query + "&callback=?", function(data){
+   // alert(""+ query + "");
+    $.each(data.ahadith, function(index, item){
+	$(".responce").html("<span class='qalink' >" + item + "</span>");
+	  });
+	});
+
+    return false;
+ }
+});
+});
+
+
+</script>
+
+   {/literal}
+    <div class="content">
+     <div align="center">
+
+<div style="margin-top:20px;text-align:center;">
+ <table border="0" width="100%" bordercolor="#FF0000">
+<tr>
+<td id="hadeeth_search_box" width="73%">
+<input type="text" id="skey" name="skey" class='search_box' onblur="if (this.value == '') this.value = '{$Default_Search_Term}';"  onFocus="if(this.value=='{$Default_Search_Term}') this.value='';" value="{if $search_word != ''}{$search_word}{else}{$Default_Search_Term}{/if}"/>
+<script type="text/javascript" src="{$base_url}/js/keyboard.js" charset="UTF-8"></script>
+
+</td>
+<td width="30%">
+<button class="hadeeth_search_button" name="submit" id="submit" onclick="check_hadith()" >&#1576;&#1581;&#1579;</button></td>
+	</tr>
+
+</table>
+</div>
+
+
+<div dir="rtl" style='text-align: right;'>
+<div class="responce" style="display:none;" align="center"></div>
+
+</div>
+
+
+
+ <script type="text/javascript" charset="utf-8">
+{literal}
+$().ready(function() {
+
+ $("#search_box").autocomplete(''+base_url+'/includes/search_autocomplete.php', {
+	    width: 320,
+		max: 200,
+		highlight: false,
+		scroll: true,
+		scrollHeight: 300,
+     selectFirst: true
+     });
+
+$("#clear").click(function() {
+		$(":input").unautocomplete();
+	});
+
+
+});
+ {/literal}
+</script>
+
+
+
+
+
+
+      <br />
+    <br />
+      <br />
+      
+      
+      
+      
+</div>
+
+    </div>
+
+    <br />
+  <center>    <h3>&#1605;&#1581;&#1585;&#1603; &#1576;&#1581;&#1579; &#1605;&#1578;&#1582;&#1589;&#1589; &#1601;&#1610; &#1575;&#1604;&#1602;&#1585;&#1575;&#1606; &#1575;&#1604;&#1603;&#1585;&#1610;&#1605;</h3>
+        <br />
+        {$smarty.now|date_format:"%A, %B %e, %Y"} <br />
+ <h5>&#1604;&#1575; &#1578;&#1606;&#1587;&#1606;&#1575; &#1605;&#1606; &#1583;&#1593;&#1608;&#1577; &#1589;&#1575;&#1604;&#1581;&#1577; &#1576;&#1592;&#1607;&#1585; &#1575;&#1604;&#1594;&#1610;&#1576;</h5>
+ </center>
+ </div>								
+ </div>	
+
+							
+							
+							
+							
+							
+								
+					

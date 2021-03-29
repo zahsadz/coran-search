@@ -1,0 +1,41 @@
+{include file="header.html" home_title="$Topic_title" site_title="$site_title"}
+
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+
+<div align="center">
+
+ <h2> {$Topic_title} </h2>
+
+<div align="center">عدد النتائج {$totalItems}</div>
+
+<div class="megas512"> {$pagination}</div>
+
+     
+<table dir="rtl" class="table" width="100%">
+{section name=i loop=$view_Topic step=3 }
+ 		<tr>
+
+  {section name=co loop=$view_Topic start=$smarty.section.i.index max=3}
+
+<td width="25%" align="center" valign="top">
+  <p align="right">&nbsp;{$view_Topic[co].Topic_No}: <a href="{$base_url}/ayat_Topic-{$view_Topic[co].Topic_No}.html">{$view_Topic[co].Topic_Name}</a>
+ </td>
+
+{/section}
+   </tr>
+
+{/section}
+
+ 
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{include file="footer.html"}

@@ -1,0 +1,34 @@
+{include file="header.html" home_title=$ayat_Topic.0.Topic_Name site_title=" أيات في القرأن الكريم"}
+
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+
+<div class="card mt-5 text-right">
+
+   <div class="card-body">
+
+ <h2>الآيات التي تتكلم عن {$ayat_Topic.0.Topic_Name}</h2>
+
+
+
+
+{section name=i loop=$ayat_Topic}
+
+<!--{$ayat_Topic[i].name}
+   {$ayat_Topic[i].id}
+-->
+{foreach from=$ayat_Topic[i].Ayat_No|sp_ayat item=aya_id}
+    <li><a href="{$base_url}/aya-{$aya_id}-sora-{$ayat_Topic[i].id}.html" >سورة {$ayat_Topic[i].name} الأية{$aya_id}</a></li>
+{/foreach}
+
+{/section}
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+{include file="footer.html"}

@@ -1,0 +1,133 @@
+{include file="header.html" 
+ home_title="سورة $name_suras" 
+ 
+ }
+
+
+
+<script>
+{literal}
+function updateplayer() {
+var sourceUrl = document.getElementById('reciter_ayates').value;
+//alert(sourceUrl);
+//var source = document​.​getElementById​(​"mp3_src"​)​;
+//source.src = sourceUrl;
+//document​.​getElementById​(​"mp3ppl"​)​.​src = sourceUrl;
+document.getElementById('desc').innerHTML = sourceUrl;
+
+}
+{/literal}
+</script>
+<div class="container">
+ <div class="row">
+
+ <div class="col-md-12" style="border:1px;background-color:#fff;">
+
+
+ <div class="card mt-3">
+   <div class="card-body">
+   <b>إستمع بصوت</b>: {$sound_check_aya_rd}
+
+<div class="mt-3" id="player-container">
+{$sura_id|sound_check_aya:$aya_id:1}
+ </div>
+
+ <div id="desc"></div>
+ </div>
+ </div>
+
+    <div align="center"  style="padding-bottom: 6px;padding-top: 6px;">
+<div class="btn-group" role="group">
+<span class="btn btn-warning"><a href="{$base_url}/aya-{$aya_previous}-sora-{$sura_id}.html"> الأية السابقة </a></span>
+ <span class="btn btn-success"><a href="{$base_url}/aya-{$aya_next}-sora-{$sura_id}.html"> الأية لتالية </a></span>
+
+ </div>
+ </div>
+ 
+
+
+ 
+ <br/>
+<div class="card mt-3">
+   {section name='i'  loop=$hafs_ayat}
+
+   <div class="card-body me_quran">
+
+  
+{$hafs_ayat[i].text}
+
+    </div>
+  {/section}
+
+  </div>
+
+ <div class="card mt-3">
+     {section name='i'  loop=$alsura}
+   <div class="card-body">
+<b>سورة : <a href="{$base_url}/sorah-{$sura_id}.html">{$alsura[i].name}</a>
+عدد الأيات : {$alsura[i].ayat_count}<br/>
+      </div>
+
+  {/section}
+      </div>
+
+ <div class="card mt-3">
+
+   {section name='i'  loop=$alaya}
+   <div class="card-body">
+
+&nbsp;&nbsp;الأية :({$alaya[i].aya})
+<a href="{$base_url}/juz-{$alaya[i].juz}.html"> الجزء :({$alaya[i].juz})</a>
+الحزب :({$alaya[i].hezb})&nbsp;-&nbsp;
+<a href="{$base_url}/safha/{$alaya[i].page}">الصفحة:({$alaya[i].page})</a></b>
+</div>
+						
+  {/section}
+      </div>
+
+  
+  
+ <div class="card mt-3">
+   {section name='i'  loop=$alaya}
+
+   <div class="card-body">
+
+  <h2 class="ayat">  
+  
+{$alaya[i].text_otmani}
+  
+  </h2>
+    </div>
+  {/section}
+
+  </div>
+ <br />
+
+ <div class="card mt-3">
+ <ul class="nav">
+  <li class="nav-item">
+
+<a class="nav-link" title="تفسير الجلالين الأية {$aya_id} سورة {$name_suras}" href="{$base_url}/tafsser-{$aya_id}-{$sura_id}-3.html">تفسير الجلالين</a>
+  </li>
+
+  <li class="nav-item">
+
+<a class="nav-link" title="التفسير الميسر الأية {$aya_id} سورة {$name_suras}" href="{$base_url}/tafsser-{$aya_id}-{$sura_id}-2.html"  > التفسير الميسر </a>
+  </li>
+
+  <li class="nav-item">
+
+<a class="nav-link" title="تفسير إبن كثير الأية {$aya_id} السورة {$name_suras}" href="{$base_url}/tafsser-{$aya_id}-{$sura_id}-1.html"  >تفسير إبن كثير </a>
+  </li>
+
+</ul>
+
+  
+    </div>
+
+  </div>
+       </div>
+
+    </div>
+
+{include file="footer.html"}

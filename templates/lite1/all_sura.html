@@ -1,0 +1,56 @@
+{include file="header.html" home_title="فهرس سور القران الكريم" site_title="$site_title"}
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+
+<div class="card mb-3" style="width:100%;">
+  <div class="card-body">
+    <h2 class="card-title">{$site_title} 
+</h2>
+    <p class="card-text">
+للتصفح إضغط علي إسم اسورة
+
+	</p>
+
+  </div>
+</div>
+
+
+    <table class="table table-hover ">
+    <tr>
+	<th>رقم السورة </th>
+	<th>إسم السورة</th>
+	<th>name</th>
+	<th>مكان النزول</th>
+	<th>ترتيب النزول</th>
+	<th>عدد الأيات</th>
+	<th>الصفحة</th>
+	</tr>
+ {section name=sorah loop=$quran_table}
+  <tr>
+    <td class="bg-success">{$quran_table[sorah].id}</td>
+    <td class="table-info"><a href="{$base_url}/sorah-{$quran_table[sorah].id}.html">{$quran_table[sorah].name}</a></td>
+	<td>{$quran_table[sorah].descent}</td>
+	<td class="bg-danger">
+	{if $quran_table[sorah].makan_nozol eq 'makki'}
+	مكية
+{else}
+	مدنية
+	{/if}
+	</td>
+    <td>{$quran_table[sorah].revel}</td>
+    <td class="table-danger">{$quran_table[sorah].ayat_count}</td>
+    <td>{$quran_table[sorah].page_no}</td>
+  </tr>
+{/section}
+
+    <tr><td></td><td>{$smarty.section.sorah.total} سورة </td></tr>
+    </table>
+
+
+</div>
+</div>
+</div>
+
+{include file="footer.html"}

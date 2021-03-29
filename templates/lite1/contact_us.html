@@ -1,0 +1,89 @@
+{include file="header.html" home_title="$LAN_9" site_title=""}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+	
+ {if $success eq ''} 
+ {else}
+ <div class="alert alert-success alert-dismissible fade show" role="alert">
+  {$success}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+ {/if}
+{if $error eq ''} {else}
+ <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {$error}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+ {/if}
+ 
+ <div class="card">
+  <div class="card-body">
+ {$LAN_1|default:"contact us"}
+  </div>
+</div>
+
+
+ 
+<br />
+
+
+{if $send == '1'}
+<form action="contact_us.php" method="POST">
+
+  <div class="form-group">
+
+{$LAN_2|default:"your name"}:
+<input class="form-control" name="from" value=""/>
+</div>
+
+  <div class="form-group">
+
+{$LAN_3|default:"your email"}:
+<input class="form-control" name="email" value=""/>
+</div>
+
+  <div class="form-group">
+
+{$LAN_4|default:"subject"} :
+<input class="form-control" name="subject" size="35" value=""/>
+</div>
+
+  <div class="form-group">
+
+{$LAN_5|default:"message"} :
+<textarea name="message" class="form-control" cols="50" rows="7"></textarea>
+</div>
+
+  <div class="form-group">
+
+{$LAN_6|default:"security code"}
+<input name="captcha"  class="form-control" size="5" />
+</div>
+
+  <div class="form-group">
+
+ <img src="includes/captcha.php" id="image" alt="security code - كود الحماية" border="1" />
+ <a href="#" onclick="document.getElementById('image').src = 'includes/captcha.php?sid=' + Math.random(); return false"><img src="{$base_url}/images/reload.gif" border="0" align="absmiddle" /></a>
+ </div>
+
+   <div class="form-group">
+<input name="submit" type="submit" value="{$LAN_7|default:"ارسل "}" class="btn btn-primary" />
+
+</div>
+
+</form>
+{/if}
+
+</div>
+</div>
+</div>
+
+
+{include file='footer.html'}

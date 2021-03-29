@@ -1,0 +1,118 @@
+{include file="header.html"  home_title="تفسير $thistafsser" }
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+
+	<center>
+<div class="card" style="width: 18rem;">
+	
+	{$sound_check_aya}
+	
+	</div>
+	
+	</center><br />
+
+<div class="card" style="width: 100%;">
+  <div class="card-header">
+     <h2 style="font-family:'me_quran','Traditional Arabic';font-size: 24px">{$alaya}</h2> </p>
+
+  </div>
+  <div class="card-body">
+
+ <div style="font-color: #c91c1c;  font-size:large;" align="left"> 
+ <div class="btn-group" role="group" aria-label="Basic example">
+
+<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/print-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$view_category[view_category].id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-printer"></span> <span class="text">print تجهيز طباعة التفسير</span></a>
+
+<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/pdftfs-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$view_category[view_category].id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-bookmark"></span> <span class="text">pdf تحميل التفسير</span></a>	
+</div>
+
+</div>
+</div>
+
+  <div class="card-body">
+
+ <p style="color: green;line-height: 35px;font-size: 18px;">{$thistafsser} :
+القول في تفسير قوله تعالي: <b> سورة: <a href="{$base_url}/sorah-{$sura_id}.html"> {$name_suras}</a> الآية:{$id_aya}</b> <br />
+ 
+
+ <div align="center"  style="padding-bottom: 6px;">
+<div class="btn-group" role="group">
+<span class="btn btn-warning"><a href="{$base_url}/tafsser-{$aya_previous}-{$sura_id}-{$type}.html"> الأية السابقة </a></span>
+<span class="btn btn-success"><a href="{$base_url}/tafsser-{$aya_next}-{$sura_id}-{$type}.html"> الأية لتالية </a></span>
+ </div>
+ </div>
+
+
+ <h5 class="card-title"><b>&raquo;</b>  {$thistafsser}</h5>
+<br />
+<p class="card-text ayat">	
+	<h2>{$tafsser|unescape:"html"}</h2>
+	
+	</p>
+  <br />
+
+
+<ul class="nav">
+
+<li class="nav-item">
+<a class="nav-link" title=" قراءة تأويل الآية في تفسير ابن كثير " href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-1.html">تفسير إبن كثير </a>
+  </li>
+
+<li class="nav-item">
+<a class="nav-link" title="قراءة معنى الآية في تفسير الجلالين " href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-3.html"> تفسير الجلالين </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="قراءة شرح الآية في التفسير الميسر" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-2.html"> التفسير الميسر </a>
+</li>
+
+</ul>
+
+<ul class="nav">
+
+<li class="nav-item">
+<a class="nav-link" title="Francais - Hamidullah Le Coran traduction en langue francaise" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-4.html"> traduction en langue francaise </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="The Saheeh International Quran Translation" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-5.html"> The Saheeh International Quran Translation </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="English Transliteration" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-6.html"> English Transliteration </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="Amazigh" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-7.html"> Amazigh</a>
+</li>
+
+</ul>
+
+<ul class="nav">
+
+<li class="nav-item">
+<a class="nav-link" title="تفسير السعدي" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-8.html">تفسير السعدي </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="إعراب القرأن الكريم" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-9.html">إعراب القرأن الكريم </a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" title="تفسير البغوي" href="{$base_url}/tafsser-{$id_aya}-{$sura_id}-10.html"> تفسير البغوي</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+{include file="footer.html"}
