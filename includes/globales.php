@@ -62,7 +62,7 @@ $method_sq =  "simple '%". $search ."%'";
  }	
 $sql ="SELECT * FROM quran_ayat WHERE " . $method_sq . "";
 $sql.=" limit ".$rowno.",".$rowperpage.""; 
-echo $sql;
+//echo $sql;
 $db->setFetchMode(2);
 $db->query($sql);
 return $db->get();
@@ -125,7 +125,7 @@ if(!empty($aKeyword[$i])) {
         break;		
   }	
 $sql ="SELECT count(*) AS total FROM quran_ayat WHERE " . $method_sq. "";
-echo $sql;
+//echo $sql;
 $db->setFetchMode(2);
 $db->query($sql);
 return $db->get('total');

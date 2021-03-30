@@ -6,12 +6,11 @@ die("Error: 404 Not Found");
 $recitations = '1';
 if (!empty($_GET["recit"])) { 
 $_SESSION['recit'] = $_GET["recit"];
-$recitations = $_SESSION["recit"];
     }
 if (empty($_SESSION["recit"])) {
     $_SESSION["recit"] = '1';
-    $recitations = $_SESSION["recit"];	
 }
+$recitations = $_SESSION["recit"];
 function get_micro_time()
 {
 list($microsec, $sec) = explode(" ", microtime());
@@ -268,7 +267,7 @@ $tag_links .= "".$v.",";
    }
 $smarty->assign ("listen_form",listen_form($recitations,'ar'));
 function listen_form($recitations,$Lang){
-global $readers_ayat;
+global $readers_ayat,$recitations;
 $Lang = 'ar';
 $s_number = count($readers_ayat);
 
