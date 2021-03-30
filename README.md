@@ -1,17 +1,17 @@
 # coran-search
-محرك بحث قرأني بحث وتفسير و تراجم
-التفاسير
-إبن كثير 
-التفسير الميسر 
-البغوي
-إعراب القرأن
-تفسير الجلالين
-تفسير السعدي
-التراجم-----
-Francais - Hamidullah Le Coran traduction en langue francaise
-The Saheeh International Quran Translation
-English Transliteration
-Amazigh Ramdane At Mansour
+محرك بحث قرأني بحث وتفسير و تراجم-
+التفاسير*
+إبن كثير* 
+التفسير الميسر* 
+البغوي*
+إعراب القرأن*
+تفسير الجلالين*
+تفسير السعدي*
+التراجم------
+*Francais - Hamidullah Le Coran traduction en langue francaise
+*The Saheeh International Quran Translation
+*English Transliteration
+*Amazigh Ramdane At Mansour
 
 إمكانية الإستماع للاية و السورة لمجموعة من القراء
 قالب متوافق مع الموبيايل
@@ -21,14 +21,14 @@ php
 قاعدة بيانات
 mysql
 
-التركيب----
+التركيب-----
 
-التعديل علي ملف db.php
-للإتصال بقاعدة البيانات
-$config['host'] = 'localhost';//localhost  السيرفر
-$config['user'] = 'root';//username database إسم مستحدم قاعدة البيانات
-$config['pass'] = '12345678';//password database كلمة سر قاعدة البيانات
-$config['table'] = 'quran1';//name database  إسم قاعدة البيانات
+التعديل علي ملف- db.php
+للإتصال بقاعدة البيانات-
+-$config['host'] = 'localhost';//localhost  السيرفر
+-$config['user'] = 'root';//username database إسم مستحدم قاعدة البيانات
+-$config['pass'] = '12345678';//password database كلمة سر قاعدة البيانات
+-$config['table'] = 'quran1';//name database  إسم قاعدة البيانات
 
 
 إميل ورابط الموقع
