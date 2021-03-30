@@ -66,16 +66,16 @@ mysql</li></ul>
 
 <ul><li>بعد التعديل عليه</li></ul>
 
-<ul><li>// Name of the file
-$filename = 'quran1.sql';</li></ul>
-<ul><li>// MySQL host عادة  localhost
-$mysql_host = 'localhost';</li></ul>
-<ul><li>// MySQL username إسم مستخدم قاعدة البيانات
-$mysql_username = 'root';</li></ul>
-<ul><li>// MySQL password كلمة سر قاعدة البيانات
-$mysql_password = '12345678';</li></ul>
-<ul><li>// Database name إسم قاعدة البيانات
-$mysql_database = 'api_alquran';
+<ul><li>// Name of the file</li></ul>
+<ul><li>$filename = 'quran1.sql';</li></ul>
+<ul><li>// MySQL host عادة  localhost</li></ul>
+<ul><li>$mysql_host = 'localhost';</li></ul>
+<ul><li>// MySQL username </li></ul>إسم مستخدم قاعدة البيانات
+<ul><li>$mysql_username = 'root';</li></ul>
+<ul><li>// MySQL password </li></ul>كلمة سر قاعدة البيانات
+<ul><li>$mysql_password = '12345678';</li></ul>
+<ul><li>// Database name </li></ul>إسم قاعدة البيانات
+<ul><li>$mysql_database = 'api_alquran';</li></ul>
 <ul><li>
 مستقبلا 
 المزيد من التفاسير </li></ul>
