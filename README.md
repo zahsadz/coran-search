@@ -1,67 +1,82 @@
 # coran-search
--محرك بحث قرأني بحث وتفسير و تراجم
-*التفاسير
-*إبن كثير 
-*التفسير الميسر 
-*البغوي
-*إعراب القرأن
-*تفسير الجلالين
-*تفسير السعدي
--التراجم
-*Francais - Hamidullah Le Coran traduction en langue francaise
-*The Saheeh International Quran Translation
-*English Transliteration
-*Amazigh Ramdane At Mansour
+<ul><li>-محرك بحث قرأني بحث وتفسير و تراجم</li>
+</ul>
+<ul><li>
+*التفاسير</li>
+<li>
+*إبن كثير </li>
+<li>
+*التفسير الميسر </li>
+<li>
+*البغوي</li>
+<li>
+*إعراب القرأن</li>
+<li>
+*تفسير الجلالين</li>
+<li>
+*تفسير السعدي</li>
+</ul>
+<ul><li>-التراجم</li></ul>
 
-إمكانية الإستماع للاية و السورة لمجموعة من القراء
-قالب متوافق مع الموبيايل
-لغة البرمجة
-php
+<ul><li>*Francais - Hamidullah Le Coran traduction en langue francaise</li>
+<li>*The Saheeh International Quran Translation</li>
+<li>*English Transliteration</li>
+<li>*Amazigh Ramdane At Mansour</li>
+</ul>
+<ul><li>إمكانية الإستماع للاية و السورة لمجموعة من القراء</li>
+<li>قالب متوافق مع الموبيايل</li>
+<li>لغة البرمجة</li>
+php</li>
+</ul>
 
-قاعدة بيانات
-mysql
-
-التركيب-----
-
-التعديل علي ملف- db.php
-للإتصال بقاعدة البيانات-
--$config['host'] = 'localhost';//localhost  السيرفر
--$config['user'] = 'root';//username database إسم مستحدم قاعدة البيانات
--$config['pass'] = '12345678';//password database كلمة سر قاعدة البيانات
--$config['table'] = 'quran1';//name database  إسم قاعدة البيانات
-
-
-إميل ورابط الموقع
-
-$contact_email ='admin@admin.cc';
-$base_url	= "http://quran-search.me";// رابط الموقع
-
-قاعدة البيانات موجودة في مجلد install
-
-مضغوطة
-quran1.zip
-
-فك الضغط وازرعها مباشرة عن طريق 
-phpmyadmin
-او إستعمل الملف
+<ul>
+<li>قاعدة بيانات
+mysql</li></ul>
 
 
-importsql.php
+<ul>
+<li>التركيب-----</li></ul>
 
-بعد التعديل عليه
+<ul><li>التعديل علي ملف- db.php
+للإتصال بقاعدة البيانات-</li></ul>
 
-// Name of the file
-$filename = 'quran1.sql';
-// MySQL host عادة  localhost
-$mysql_host = 'localhost';
-// MySQL username إسم مستخدم قاعدة البيانات
-$mysql_username = 'root';
-// MySQL password كلمة سر قاعدة البيانات
-$mysql_password = '12345678';
-// Database name إسم قاعدة البيانات
+<ul><li>-$config['host'] = 'localhost';//localhost  السيرفر</li>
+<li>-$config['user'] = 'root';//username database إسم مستحدم قاعدة البيانات</li>
+<li>-$config['pass'] = '12345678';//password database كلمة سر قاعدة البيانات</li>
+<li>-$config['table'] = 'quran1';//name database  إسم قاعدة البيانات</li>
+</li></ul>
+
+<ul><li>إميل ورابط الموقع</li></ul>
+
+
+<ul><li>$contact_email ='admin@admin.cc';</li></ul>
+<ul><li>$base_url	= "http://quran-search.me";// رابط الموقع</li></ul>
+
+<ul><li>قاعدة البيانات موجودة في مجلد install</li></ul>
+
+<ul><li>مضغوطة</li></ul>
+<ul><li>quran1.zip</li></ul>
+
+<ul><li>فك الضغط وازرعها مباشرة عن طريق </li></ul>
+<ul><li>phpmyadmin</li></ul>
+<ul><li>او إستعمل الملف</li></ul>
+
+
+<ul><li>importsql.php</li></ul>
+
+<ul><li>بعد التعديل عليه</li></ul>
+
+<ul><li>// Name of the file
+$filename = 'quran1.sql';</li></ul>
+<ul><li>// MySQL host عادة  localhost
+$mysql_host = 'localhost';</li></ul>
+<ul><li>// MySQL username إسم مستخدم قاعدة البيانات
+$mysql_username = 'root';</li></ul>
+<ul><li>// MySQL password كلمة سر قاعدة البيانات
+$mysql_password = '12345678';</li></ul>
+<ul><li>// Database name إسم قاعدة البيانات
 $mysql_database = 'api_alquran';
-
+<ul><li>
 مستقبلا 
-المزيد من التفاسير 
-
+المزيد من التفاسير </li></ul>
 
