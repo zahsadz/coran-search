@@ -84,7 +84,7 @@ switch($_GET['type']){
     
 define ('K_PATH_CACHE',dirname(__FILE__).'/cache/');
 define ('K_PATH_IMAGES', dirname(__FILE__).'/images/');
-define ('PDF_HEADER_LOGO', 'icon.png');
+define ('PDF_HEADER_LOGO', 'quran.png');
 define ('PDF_HEADER_LOGO_WIDTH', 25);
 define ('K_BLANK_IMAGE', '_blank.png');
 define ('PDF_PAGE_FORMAT', 'A4');
