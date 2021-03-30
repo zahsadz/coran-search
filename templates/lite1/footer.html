@@ -71,7 +71,9 @@ $(document).ready(function() {
 
 $("#recit").change(function() {
 
-     window.location='{/literal}{$base_url}{literal}/search.php?search_word={/literal}{$search_word}{literal}&method={/literal}{$method}{literal}&recit=' + this.value
+     window.location='{/literal}{$base_url}{literal}/search.php?search_word={/literal}{if isset($smarty.get.search_word)}{$smarty.get.search_word}{else}
+{/if}{literal}&method={/literal}{if isset($smarty.get.method)}{$smarty.get.method}{else}
+1{/if}{literal}&recit=' + this.value
 
 });
 
@@ -89,7 +91,7 @@ $("#reciter_ayates").change(function(){
    // src = $(this).attr('value');//gets me the url of the new track
        src = $(this).val();
 
-	alert (src);
+	//alert (src);
     var audio = $("#player");      
   $("#mp3ppl").attr("src",src);
   audio[0].pause();
@@ -121,7 +123,7 @@ $('#reciter_ayates').on('change',function(e){
         player.setSrc($(this).val());        
         player.play();
            src = $(this).val();
-	alert (src);
+	//alert (src);
 
 });
 

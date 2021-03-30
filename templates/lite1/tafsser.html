@@ -24,9 +24,9 @@
  <div style="font-color: #c91c1c;  font-size:large;" align="left"> 
  <div class="btn-group" role="group" aria-label="Basic example">
 
-<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/print-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$view_category[view_category].id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-printer"></span> <span class="text">print تجهيز طباعة التفسير</span></a>
+<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/print-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$id_aya}-{$sura_id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-printer"></span> <span class="text">print تجهيز طباعة التفسير</span></a>
 
-<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/pdftfs-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$view_category[view_category].id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-bookmark"></span> <span class="text">pdf تحميل التفسير</span></a>	
+<a  type="button" class="btn btn-secondary" target="_blank" rel="noreferrer nofollow" href="{$base_url}/pdftfs-{$id_aya}-{$sura_id}-{$type}.html" onclick="NewWindow(this.href,'{$id_aya}-{$sura_id}','700','600','yes',scrollbars=1);return false"><span class="lnr lnr-bookmark"></span> <span class="text">pdf تحميل التفسير</span></a>	
 </div>
 
 </div>
@@ -46,9 +46,9 @@
  </div>
 
 
- <h5 class="card-title"><b>&raquo;</b>  {$thistafsser}</h5>
+ <h5 dir="{$direction}" class="card-title mt-5"><b>&raquo;</b>  {$thistafsser}</h5>
 <br />
-<p class="card-text ayat">	
+<p dir="{$direction}" class="card-text mt-5 ayat">	
 	<h2>{$tafsser|unescape:"html"}</h2>
 	
 	</p>
