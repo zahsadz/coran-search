@@ -1,13 +1,13 @@
 # coran-search
-محرك بحث قرأني بحث وتفسير و تراجم-
-التفاسير*
-إبن كثير* 
-التفسير الميسر* 
-البغوي*
-إعراب القرأن*
-تفسير الجلالين*
-تفسير السعدي*
-التراجم------
+-محرك بحث قرأني بحث وتفسير و تراجم
+*التفاسير
+*إبن كثير 
+*التفسير الميسر 
+*البغوي
+*إعراب القرأن
+*تفسير الجلالين
+*تفسير السعدي
+-التراجم
 *Francais - Hamidullah Le Coran traduction en langue francaise
 *The Saheeh International Quran Translation
 *English Transliteration
